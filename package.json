@@ -5,9 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "test-precommit": "jest -o",
     "dev": "ts-node src/server.ts",
     "start": "ts-node dist/server.js",
     "build": "tsc -p ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test-precommit"
+    }
   },
   "repository": {
     "type": "git",
@@ -28,6 +34,7 @@
     "@types/express": "^4.17.7",
     "@types/jest": "^26.0.5",
     "@types/node": "^14.0.23",
+    "husky": "^4.2.5",
     "jest": "^26.1.0",
     "supertest": "^4.0.2",
     "ts-jest": "^26.1.3",
