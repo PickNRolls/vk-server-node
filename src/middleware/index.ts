@@ -1,3 +1,3 @@
 export * from './logger';
-export * from './errorHadler';
+export * from './errorHandler';
 export * from './jsonApi';

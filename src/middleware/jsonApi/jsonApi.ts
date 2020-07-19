@@ -11,9 +11,9 @@ export const jsonApi = (req: Request, res: Response, next: NextFunction) => {
     res.status(415).end();
   }
 
-  if (req.headers['accept'] !== 'application/vnd.api+json') {
+  if (req.headers.accept !== 'application/vnd.api+json') {
     res.status(406).end();
   }
 
   next();
-}
+};
